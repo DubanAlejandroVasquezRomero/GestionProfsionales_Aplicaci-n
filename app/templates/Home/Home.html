@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ProManage</div>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#services">Contacto</a></li>
+                <li><a href="{{ url_for('auth.login') }}">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

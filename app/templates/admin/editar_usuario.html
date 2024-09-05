@@ -1,0 +1,19 @@
+<form method="POST">
+    <div class="form-group">
+        <label for="Nombre">Nombre</label>
+        <input type="text" name="Nombre" class="form-control" value="{{ usuario.nombre }}" required>
+    </div>
+    <div class="form-group">
+        <label for="Correo">Correo Electrónico</label>
+        <input type="email" name="Correo" class="form-control" value="{{ usuario.correo }}" required>
+    </div>
+    <div class="form-group">
+        <label for="Rol">Rol</label>
+        <select name="Rol" class="form-control" required>
+            <option value="cliente" {% if usuario.rol == 'cliente' %}selected{% endif %}>Cliente</option>
+            <option value="profesional" {% if usuario.rol == 'profesional' %}selected{% endif %}>Profesional</option>
+            <option value="admin" {% if usuario.rol == 'admin' %}selected{% endif %}>Administrador</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+</form>
